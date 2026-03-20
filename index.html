@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>一人麻雀 - 雀魂風UI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-layer">
+        <!-- 相手プレイヤー風のダミー領域 -->
+        <div id="dummy-player-top" class="player-info top">
+            <div class="avatar">CPU</div>
+            <div class="score">25000</div>
+        </div>
+        
+        <!-- 中央の捨て牌（河）と山牌 -->
+        <div id="table-center">
+            <div id="discard-area">
+                <div id="discards" class="hand-container grid-6x3"></div>
+            </div>
+            
+            <div id="deck-zone">
+                <div id="deck" class="deck" title="クリックしてツモ">
+                    <div class="tile back deck-tile"><span>🀫</span></div>
+                    <div class="tiles-left">残り: <strong id="tiles-left">0</strong></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- プレイヤー領域 -->
+        <div id="player-area">
+            <div class="player-info-panel">
+                <div class="avatar">You</div>
+                <div class="score">25000</div>
+            </div>
+            
+            <!-- アガリボタンポップアップ -->
+            <div id="action-buttons">
+                <button id="agari-btn" class="action-tsumo hidden">ツモ</button>
+            </div>
+            
+            <div class="hand-row">
+                <div id="hand" class="hand-container"></div>
+                <div class="drawn-gap"></div>
+                <div id="drawn-tile-container"></div>
+            </div>
+        </div>
+        
+        <!-- UIオーバーレイ (結果発表) -->
+        <div id="overlay-ui">
+            <div id="message-modal" class="hidden">
+                <h2 id="message-title"></h2>
+                <button id="restart-btn">次局へ (リスタート)</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

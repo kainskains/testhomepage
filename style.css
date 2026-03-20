@@ -213,16 +213,25 @@ textarea.form-control { resize: vertical; min-height: 150px; }
     .footer-links { grid-template-columns: 1fr 1fr; }
 }
 
+.typewriter-wrap {
+    display: inline-block;
+    text-align: left;
+    min-width: 13em;
+    white-space: nowrap;
+}
+
 /* Smartphone Specific Adjustments */
 @media (max-width: 600px) {
-    .parallax-content { padding: 30px 20px; border-radius: 20px; }
-    .hero h1 { font-size: 1.4rem; min-height: 80px; letter-spacing: 0; }
-    .hero p { font-size: 0.95rem; margin-bottom: 25px; line-height: 1.6; }
-    .hero-buttons { flex-direction: column; width: 100%; gap: 10px; }
-    .hero-buttons .btn { width: 100%; padding: 12px 20px; }
-    .badge { font-size: 0.7rem; padding: 4px 10px; margin-bottom: 15px; }
+    .parallax-content { padding: 30px 20px; border-radius: 20px; width: 100%; overflow: hidden; box-sizing: border-box; }
+    .hero { min-height: 100vh; }
+    .hero h1 { font-size: min(1.5rem, 6.5vw) !important; min-height: 80px; letter-spacing: 0; line-height: 1.4; margin-bottom: 20px; width: 100%; }
+    .typewriter-wrap { min-width: 0 !important; width: 100% !important; white-space: normal !important; text-align: left; display: block; word-break: break-all; overflow-wrap: break-word; }
+    .hero p { font-size: 0.95rem; margin-bottom: 25px; line-height: 1.6; width: 100%; white-space: normal; }
+    .hero-buttons { flex-direction: column; width: 100%; gap: 10px; display: flex; }
+    .hero-buttons .btn { width: 100%; padding: 12px 20px; box-sizing: border-box; }
+    .badge { font-size: 0.7rem; padding: 4px 10px; margin-bottom: 15px; white-space: normal; }
     
-    .section-header h2 { font-size: 2.2rem; }
+    .section-header h2 { font-size: 2rem; }
     .contact-container { padding: 30px 20px; }
     .footer-links { grid-template-columns: 1fr; gap: 20px; }
 }

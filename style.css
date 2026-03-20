@@ -207,8 +207,22 @@ textarea.form-control { resize: vertical; min-height: 150px; }
     .hamburger.active span:nth-child(2) { opacity: 0; }
     .hamburger.active span:nth-child(3) { transform: translateY(-9px) rotate(-45deg); background: #fff; }
     
-    .hero h1 { font-size: 3rem; min-height: 140px; }
+    .hero h1 { font-size: 2.5rem; min-height: 120px; }
     .about-content { grid-template-columns: 1fr; }
     .footer-content { grid-template-columns: 1fr; gap: 40px; }
     .footer-links { grid-template-columns: 1fr 1fr; }
+}
+
+/* Smartphone Specific Adjustments */
+@media (max-width: 600px) {
+    .parallax-content { padding: 30px 20px; border-radius: 20px; }
+    .hero h1 { font-size: 1.4rem; min-height: 80px; letter-spacing: 0; }
+    .hero p { font-size: 0.95rem; margin-bottom: 25px; line-height: 1.6; }
+    .hero-buttons { flex-direction: column; width: 100%; gap: 10px; }
+    .hero-buttons .btn { width: 100%; padding: 12px 20px; }
+    .badge { font-size: 0.7rem; padding: 4px 10px; margin-bottom: 15px; }
+    
+    .section-header h2 { font-size: 2.2rem; }
+    .contact-container { padding: 30px 20px; }
+    .footer-links { grid-template-columns: 1fr; gap: 20px; }
 }
